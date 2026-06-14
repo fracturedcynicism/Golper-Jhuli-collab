@@ -2,7 +2,7 @@
 An experimental collaborative novella.
 
 # Collaborative Novella Reader
-## Bilingual (EN / বাংলা) — Fractured Cynicism
+## Bilingual (EN / বাংলা)
 
 E-ink paper aesthetic. Four chapters. Four authors. One toggle to switch languages.
 
