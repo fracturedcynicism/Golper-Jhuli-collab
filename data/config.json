@@ -3,7 +3,7 @@
   "title_bn": "সমষ্টি",
   "subtitle_en": "Five authors, one destiny: A collaborative journey through memory, guilt, and the price of redemption.",
   "subtitle_bn": "পাঁচটি কলম, একটিই নিয়তি: স্মৃতি, অপরাধবোধ এবং মুক্তির মূল্য খোঁজার এক যৌথ আখ্যান।",
-  "publisher": "",
+  "publisher": "Bongo Buddies Golper Jhuli",
   "year": "2026",
   "chapters": [
     {
@@ -56,7 +56,7 @@
     },
     {
       "id": "chapter-5",
-      "title_en": "Chapter IV",
+      "title_en": "Chapter V",
       "title_bn": "অধ্যায় ৪",
       "file_en": "books/en/chapter-5.txt",
       "file_bn": "books/bn/chapter-5.txt",
