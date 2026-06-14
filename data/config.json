@@ -1,0 +1,58 @@
+{
+  "title_en": "NOVELLA TITLE",
+  "title_bn": "উপন্যাসের নাম",
+  "subtitle_en": "A Collaborative Novella",
+  "subtitle_bn": "একটি যৌথ উপন্যাসিকা",
+  "publisher": "Fractured Cynicism",
+  "year": "2025",
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "title_en": "Chapter I",
+      "title_bn": "অধ্যায় ১",
+      "file_en": "books/en/chapter-1.txt",
+      "file_bn": "books/bn/chapter-1.txt",
+      "author_en": "Author One",
+      "author_bn": "লেখক এক",
+      "author_role_en": "Opening Voice",
+      "author_role_bn": "প্রথম কণ্ঠ",
+      "accent": "#4a4a4a"
+    },
+    {
+      "id": "chapter-2",
+      "title_en": "Chapter II",
+      "title_bn": "অধ্যায় ২",
+      "file_en": "books/en/chapter-2.txt",
+      "file_bn": "books/bn/chapter-2.txt",
+      "author_en": "Author Two",
+      "author_bn": "লেখক দুই",
+      "author_role_en": "Second Voice",
+      "author_role_bn": "দ্বিতীয় কণ্ঠ",
+      "accent": "#4a4a4a"
+    },
+    {
+      "id": "chapter-3",
+      "title_en": "Chapter III",
+      "title_bn": "অধ্যায় ৩",
+      "file_en": "books/en/chapter-3.txt",
+      "file_bn": "books/bn/chapter-3.txt",
+      "author_en": "Author Three",
+      "author_bn": "লেখক তিন",
+      "author_role_en": "Third Voice",
+      "author_role_bn": "তৃতীয় কণ্ঠ",
+      "accent": "#4a4a4a"
+    },
+    {
+      "id": "chapter-4",
+      "title_en": "Chapter IV",
+      "title_bn": "অধ্যায় ৪",
+      "file_en": "books/en/chapter-4.txt",
+      "file_bn": "books/bn/chapter-4.txt",
+      "author_en": "Author Four",
+      "author_bn": "লেখক চার",
+      "author_role_en": "Closing Voice",
+      "author_role_bn": "চতুর্থ কণ্ঠ",
+      "accent": "#4a4a4a"
+    }
+  ]
+}
