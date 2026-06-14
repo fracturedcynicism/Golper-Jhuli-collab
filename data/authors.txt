@@ -1,19 +1,24 @@
-AUTHOR: Author One
-AUTHOR_BN: লেখক এক
+AUTHOR: Ishaan
+AUTHOR_BN: ইশান
 BIO_EN: A short biography of Author One. Two or three sentences about their background, writing style, and contribution to this novella.
 BIO_BN: লেখক একের সংক্ষিপ্ত পরিচিতি। তাঁর লেখার ধরন ও এই উপন্যাসিকায় তাঁর অবদান সম্পর্কে দুই বা তিনটি বাক্য।
 
-AUTHOR: Author Two
-AUTHOR_BN: লেখক দুই
+AUTHOR: Soumyadeep
+AUTHOR_BN: সৌম্যদীপ
 BIO_EN: A short biography of Author Two. Two or three sentences about their background, writing style, and contribution to this novella.
 BIO_BN: লেখক দুইয়ের সংক্ষিপ্ত পরিচিতি। তাঁর লেখার ধরন ও এই উপন্যাসিকায় তাঁর অবদান সম্পর্কে দুই বা তিনটি বাক্য।
 
-AUTHOR: Author Three
-AUTHOR_BN: লেখক তিন
+AUTHOR: Ditsha
+AUTHOR_BN: দিক্ষা
 BIO_EN: A short biography of Author Three. Two or three sentences about their background, writing style, and contribution to this novella.
 BIO_BN: লেখক তিনের সংক্ষিপ্ত পরিচিতি। তাঁর লেখার ধরন ও এই উপন্যাসিকায় তাঁর অবদান সম্পর্কে দুই বা তিনটি বাক্য।
 
-AUTHOR: Author Four
-AUTHOR_BN: লেখক চার
+AUTHOR: Jit
+AUTHOR_BN: জিত
+BIO_EN: A short biography of Author Four. Two or three sentences about their background, writing style, and contribution to this novella.
+BIO_BN: লেখক চারের সংক্ষিপ্ত পরিচিতি। তাঁর লেখার ধরন ও এই উপন্যাসিকায় তাঁর অবদান সম্পর্কে দুই বা তিনটি বাক্য।
+
+AUTHOR: Fractured Cynicism
+AUTHOR_BN: ফ্র্যাকচার্ড সিনিসিজম
 BIO_EN: A short biography of Author Four. Two or three sentences about their background, writing style, and contribution to this novella.
 BIO_BN: লেখক চারের সংক্ষিপ্ত পরিচিতি। তাঁর লেখার ধরন ও এই উপন্যাসিকায় তাঁর অবদান সম্পর্কে দুই বা তিনটি বাক্য।
