@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novella Reader</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="font-md">
+
+<!-- ── MOBILE BAR ──────────────────────────────── -->
+<div id="mobile-bar">
+  <span class="mob-title" id="mob-title">Loading…</span>
+  <div class="mob-controls">
+    <!-- Mobile lang toggle -->
+    <button class="mob-btn lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+    <button class="mob-btn lang-btn"        data-lang="bn" onclick="setLang('bn')">বাং</button>
+    <button class="mob-btn" id="mob-nav-btn" onclick="toggleMobileDrawer()">☰</button>
+  </div>
+</div>
+
+<!-- Mobile Drawer -->
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<div id="mob-drawer">
+  <div style="padding:16px 20px;border-bottom:1px solid var(--rule);">
+    <div class="pub-label" id="mob-pub-label">Fractured Cynicism</div>
+    <div class="novella-title" id="mob-novella-title">Loading…</div>
+  </div>
+  <div class="chapter-nav" style="padding:8px 0;">
+    <div class="chapter-nav-label">Chapters</div>
+    <div id="mob-chapter-list"></div>
+  </div>
+</div>
+
+<!-- ── MAIN APP ─────────────────────────────────── -->
+<div id="app">
+
+  <!-- LEFT SIDEBAR -->
+  <aside id="sidebar">
+
+    <div class="sidebar-top">
+      <div class="pub-label" id="pub-label">Fractured Cynicism</div>
+      <div class="novella-title" id="novella-title">Loading…</div>
+      <div class="novella-sub"   id="novella-sub"></div>
+
+      <!-- Language toggle -->
+      <div class="lang-toggle" style="margin-top:14px;">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <div class="lang-divider"></div>
+        <button class="lang-btn" data-lang="bn" onclick="setLang('bn')">বাংলা</button>
+      </div>
+    </div>
+
+    <!-- Chapter list -->
+    <div class="chapter-nav">
+      <div class="chapter-nav-label">Chapters</div>
+      <div id="chapter-list"></div>
+    </div>
+
+    <!-- Footer / progress -->
+    <div class="sidebar-footer">
+      <div class="reading-progress">
+        <span>Progress</span>
+        <span id="progress-label">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- CENTER READER -->
+  <div id="main">
+
+    <!-- Topbar -->
+    <div id="topbar">
+      <div class="topbar-loc" id="topbar-loc"></div>
+      <div class="topbar-controls">
+        <button class="ctrl-btn" onclick="changeFontSize(-1)">A−</button>
+        <button class="ctrl-btn" onclick="changeFontSize(1)">A+</button>
+        <button class="ctrl-btn" onclick="showWelcome()">↩ Contents</button>
+      </div>
+    </div>
+
+    <!-- Scrollable reader area -->
+    <div id="reader">
+      <div id="reader-content">
+        <!-- Welcome or chapter rendered here by JS -->
+        <div id="loading">
+          <div class="loading-spinner"></div>
+          <div class="loading-text">Loading…</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
