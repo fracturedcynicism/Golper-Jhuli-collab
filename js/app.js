@@ -243,8 +243,26 @@ function stripMeta(raw) {
   return lines.slice(end).join('\n');
 }
 
+// Detects .txt files exported from Word/Google Docs with no blank
+// lines between paragraphs — every line-break is a paragraph break,
+// not a wrapped continuation, producing a single wall of text if
+// treated normally. Only triggers when blank lines are nearly absent
+// across a long-enough file, so normally-formatted files (with real
+// blank-line paragraph spacing) are never touched or altered.
+// Works for both English and Bengali text — script-agnostic, only
+// looks at blank-line ratio, not character content.
+function detectSingleBreakFormat(lines) {
+  const nonEmpty = lines.filter(l => l.trim() !== '').length;
+  const empty    = lines.length - nonEmpty;
+  if (nonEmpty < 20) return false;            // too short to judge reliably
+  const blankRatio = empty / lines.length;
+  return blankRatio < 0.03;                   // almost no blank lines anywhere
+}
+
 function processText(raw) {
   const lines = raw.split('\n');
+  const singleBreakMode = detectSingleBreakFormat(lines);
+
   let html = '', buf = [];
 
   const flush = () => {
@@ -255,10 +273,22 @@ function processText(raw) {
 
   for (const line of lines) {
     const t = line.trim();
-    if (/^(\*{3,}|—{3,}|-{3,}|·{3,})$/.test(t))       { flush(); html += `<div class="scene-break">· · ·</div>`; }
-    else if (/^\*[^*]{2,}\*$/.test(t) && t.length < 120){ flush(); html += `<span class="timestamp-line">${esc(t.slice(1,-1))}</span>`; }
-    else if (t === '')                                     { flush(); }
-    else                                                   { buf.push(t); }
+    if (/^(\*{3,}|—{3,}|-{3,}|·{3,})$/.test(t)) {
+      flush();
+      html += `<div class="scene-break">· · ·</div>`;
+    } else if (/^\*[^*]{2,}\*$/.test(t) && t.length < 120) {
+      flush();
+      html += `<span class="timestamp-line">${esc(t.slice(1,-1))}</span>`;
+    } else if (t === '') {
+      flush();
+    } else if (singleBreakMode) {
+      // Single-break mode: every non-empty line is its own paragraph
+      buf.push(t);
+      flush();
+    } else {
+      // Normal mode: accumulate until a blank line
+      buf.push(t);
+    }
   }
   flush();
   return html;
